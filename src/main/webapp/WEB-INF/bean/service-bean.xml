@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+   
+   <import resource="dataSource.xml"/>
+   
+   <bean id="iuserInfoService" class="com.aks.services.UserInfoServices">
+        <property name="userInfoDao" ref="userInfoDao"/>
+   </bean>
+   
+   <bean id="welcomeAction" class="org.aks.action.WelcomeAction">
+       <property name="iuserInfoService" ref="iuserInfoService"/>
+   </bean>
+</beans>
