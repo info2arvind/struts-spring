@@ -12,4 +12,16 @@
    <bean id="welcomeAction" class="org.aks.action.WelcomeAction">
        <property name="iuserInfoService" ref="iuserInfoService"/>
    </bean>
+   
+   <bean id="jsonAction" class="org.aks.action.JsonAction">
+       <property name="iuserInfoService" ref="iuserInfoService"/>
+       <property name="user">
+            <bean class="com.aks.entities.UserInfo">
+                
+            </bean>
+       </property>
+   </bean>
+  <!--   <bean id="userInfo" class="com.aks.entities.UserInfo">
+       <property name="iuserInfoService" ref="iuserInfoService"/>
+   </bean> -->
 </beans>

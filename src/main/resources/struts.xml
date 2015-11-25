@@ -4,7 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<constant name="struts.devMode" value="false" />
-	<package name="test" extends="struts-default, json-default" namespace="/">
+	<package name="basic" extends="struts-default" namespace="/">
 		<action name="displayWelcome" class="org.aks.action.DisplayWelcome">
 			<result>pages/public/welcome.jsp</result>
 		</action>
@@ -14,9 +14,15 @@
 		<action name="logout" class="org.aks.action.HomeAction" method="logout">
 			<result name="success">pages/public/welcome.jsp</result>
 		</action>
-		<action name="echo" class="org.aks.action.WelcomeAction" method="ajaxResult">
-			<result type="json" name="success">pages/public/welcome.jsp</result>
+		<action name="echo" class="org.aks.action.WelcomeAction">
+			<result name="success">pages/other/show.jsp</result>
 		</action>
 
 	</package>
+	<package name="jsonUse" extends="struts-default, json-default" namespace="/">
+		<action name="jsoncall" class="org.aks.action.JsonAction">
+			<result type="json"/>
+		</action>
+
+	</package> 
 </struts>

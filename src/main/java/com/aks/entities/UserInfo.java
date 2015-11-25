@@ -17,7 +17,7 @@ public class UserInfo implements Serializable{
 	
 	@Id
 	private int userId;
-	private String Username;
+	private String username;
 	private String password;
 	private boolean status;
 	private Date doj;
@@ -29,11 +29,12 @@ public class UserInfo implements Serializable{
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
+	
 	public String getUsername() {
-		return Username;
+		return username;
 	}
 	public void setUsername(String username) {
-		Username = username;
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -67,7 +68,7 @@ public class UserInfo implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "UserInfo [userId=" + userId + ", Username=" + Username
+		return "UserInfo [userId=" + userId + ", Username=" + username
 				+ ", password=" + password + ", status=" + status + ", doj="
 				+ doj + ", fullName=" + fullName + ", orgName=" + orgName + "]";
 	}
