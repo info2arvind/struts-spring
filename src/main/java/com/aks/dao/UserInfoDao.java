@@ -23,6 +23,7 @@ public class UserInfoDao {
 	public void saveUserInfo(UserInfo user){
 		Session session = getSessionFactory().getCurrentSession();
 		System.out.println(session);
+		System.out.println(user);
 		session.save(user);
 	}
 	
